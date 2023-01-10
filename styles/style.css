@@ -1,3 +1,13 @@
+body h1 h2 h3 p a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: 100%;
+  display: block;
+}
+div {
+  display: block;
+}
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -13,13 +23,11 @@
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: #f2f2f2;
   /* выше установили ограничения для секции */
-}
-
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -28,4 +36,148 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+.logo {
+  width: 228px;
+  height: 32px;
+
+}
+
+.logo_place_header {
+  background-image: url(/images/logo_place_header.svg);
+  position: absolute;
+  top: 30px;
+  left: 64px;
+}
+
+.header__title {
+  font-size: 102px;
+  font-weight: 600;
+  line-height: 96px;
+  max-width: 730px;
+  position: relative;
+  margin-left: 64px;
+  z-index: 1;
+}
+
+.header__subtitle {
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 25px;
+  max-width: 388px;
+  margin: 0;
+  z-index: 1;
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__square-pic {
+  height: 568px;
+  width: 568px;
+  background-color: #2f80ed;
+  position: absolute;
+  right: 0;
+  top: 64px;
+}
+
+.header__main-illustration {
+  background-image: url(/images/header-image.png);
+  width: 765px;
+  height: 608px;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  flex: 0 0 auto;
+}
+
+.description {
+  margin-top: 100px;
+}
+
+.two-colums {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.two-colums__brief {
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2f80ed;
+}
+
+.two-colums__main-text {
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-colums__paragraph {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 34px;
+  margin: 30px 0 0 0;
+}
+
+.two-colums__paragraph:first-child {
+  margin: 0;
+}
+
+.two-colums__span_accent {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+}
+
+.digits {
+  margin-top: 100px;
+}
+
+.section__title {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.section__subtitle {
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 34px;
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1100px;
+  margin: auto;
+}
+
+.table__cell {
+  width: 250px;
+}
+
+.table__heading {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.15;
+  margin-top: 60px;
+}
+
+.table__text {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
 }
