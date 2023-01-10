@@ -30,14 +30,6 @@ div {
   /* выше установили ограничения для секции */
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
-
 .logo {
   width: 228px;
   height: 32px;
@@ -222,4 +214,41 @@ div {
   font-size: 36px;
   font-weight: normal;
   line-height: 51px;
+}
+
+.kaufman {
+  background-color: #1f1f1f;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.section__title_theme_dark {
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+
+.section__subtitle_theme_dark {
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
+  z-index: 1;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  top: 0;
+  right: -210px;
+  z-index: 0;
 }
