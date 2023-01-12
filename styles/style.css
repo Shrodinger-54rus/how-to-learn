@@ -1,13 +1,3 @@
-body h1 h2 h3 p a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  display: block;
-}
-
-div {
-  display: block;
-}
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -27,7 +17,10 @@ div {
   position: relative;
   align-items: center;
   background-color: #f2f2f2;
-  /* выше установили ограничения для секции */
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+    /* выше установили ограничения для секции */
 }
 
 .logo {
@@ -48,7 +41,6 @@ div {
   font-weight: 600;
   line-height: 96px;
   max-width: 730px;
-  position: relative;
   margin-left: 64px;
   z-index: 1;
 }
@@ -67,6 +59,7 @@ div {
 
 .header__link {
   text-decoration: none;
+  color: #2f80ed;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -80,18 +73,16 @@ div {
 }
 
 .header__main-illustration {
-  background-image: url(../images/header-image.png);
   width: 765px;
   height: 608px;
-  background-size: cover;
   position: absolute;
   right: 0;
   bottom: 0;
-  flex: 0 0 auto;
 }
 
 .description {
   margin-top: 100px;
+  font-size: 100%;
 }
 
 .two-colums {
@@ -107,6 +98,7 @@ div {
   font-size: 18px;
   font-weight: normal;
   color: #2f80ed;
+  margin: 0;
 }
 
 .two-colums__main-text {
@@ -125,7 +117,7 @@ div {
   margin: 0;
 }
 
-.two-colums__span_accent {
+.two-colums__span-accent {
   font-size: 24px;
   font-weight: 600;
   line-height: 34px;
@@ -133,9 +125,10 @@ div {
 
 .digits {
   margin-top: 100px;
+  font-size: 100%;
 }
 
-.section__title {
+.section-title {
   text-align: center;
   font-size: 60px;
   font-weight: 600;
@@ -143,7 +136,7 @@ div {
   margin: 0;
 }
 
-.section__subtitle {
+.section-subtitle {
   text-align: center;
   font-size: 24px;
   font-weight: normal;
@@ -162,6 +155,7 @@ div {
 .table__cell {
   width: 250px;
   margin-top: 60px;
+  list-style: none;
 }
 
 .table__heading {
@@ -182,16 +176,17 @@ div {
   margin-top: 100px;
   background-color: #f2f2f2;
   background-image: url(../images/feynman.png);
-  height: 890px;
+  min-height: 890px;
   background-position: bottom left;
   background-repeat: no-repeat;
   padding-top: 100px;
   box-sizing: border-box;
   position: relative;
+  font-size: 100%;
 }
 
-.feynman__tittle {
-  width: 648px;
+.feynman__title {
+  max-width: 648px;
   font-size: 120px;
   font-weight: 600;
   line-height: 1.15;
@@ -214,6 +209,7 @@ div {
   font-size: 36px;
   font-weight: normal;
   line-height: 51px;
+  color: #2f80ed;
 }
 
 .kaufman {
@@ -223,18 +219,17 @@ div {
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+  font-size: 100%;
 }
 
-.section__title_theme_dark {
+.section-title_theme_dark {
   color: white;
   z-index: 1;
-  position: relative;
 }
 
-.section__subtitle_theme_dark {
+.section-subtitle_theme_dark {
   color: white;
   z-index: 1;
-  position: relative;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -247,10 +242,13 @@ div {
 }
 
 .kaufman__triangle {
+  background-image: url(../images/kaufman-triangle.svg);
+  background-repeat: no-repeat;
+  width: 877px;
+  height: 877px;
   position: absolute;
   top: 0;
   right: -210px;
-  z-index: 0;
 }
 
 .footer {
@@ -259,20 +257,37 @@ div {
   box-sizing: border-box;
   padding-top: 60px;
   padding-bottom: 40px;
+  font-size: 100%;
 }
 
 .footer__columns {
   display: flex;
+  min-height: 250px;
   justify-content: space-between;
   width: 90%;
   margin: auto;
-  min-height: 250px;
-  position: relative;
+  padding: 0;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer__column_content_copyright {
   flex-basis: 711px;
 
+}
+
+.footer__column_content_info {
+  flex-direction: column;
+  justify-content: start;
+}
+
+.footer__column_content_social {
+  flex-direction: column;
+  justify-content: start;
 }
 
 .logo_place_footer {
@@ -282,21 +297,9 @@ div {
 .footer__author {
   color: white;
   margin: 18px 0;
-  position: absolute;
-  bottom: 0px;
   font-size: 18px;
   line-height: 25px;
   font-weight: normal;
-}
-
-.footer__column_content_info {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer__column_content_social {
-  display: flex;
-  flex-direction: column;
 }
 
 .footer__column-heading {
@@ -316,4 +319,13 @@ div {
   font-weight: normal;
   text-decoration: none;
   color: white;
+}
+
+.footer__column-links:last-child {
+  margin-bottom: 16px;
+}
+
+.footer__social-icons {
+  margin-right: 10px;
+  height: 16px;
 }
